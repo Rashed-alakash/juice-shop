@@ -1,0 +1,9 @@
+rules:
+  - id: dangerous-eval-usage
+    languages: [javascript, typescript]
+    severity: ERROR
+    message: "Dangerous eval() usage detected - avoid eval on dynamic/user input (RCE risk)."
+    metadata:
+      cwe: "CWE-95: Improper Neutralization of Directives in Dynamically Evaluated Code"
+      owasp: "A03:2021 - Injection"
+    pattern: eval(...)

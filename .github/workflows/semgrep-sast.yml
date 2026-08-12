@@ -21,4 +21,4 @@ jobs:
         run: pip install semgrep
 
       - name: Run Semgrep SAST scan
-        run: semgrep scan --config p/default
+        run: semgrep scan --config p/default --config .semgrep/custom-rules.yml
